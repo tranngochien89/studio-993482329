@@ -38,6 +38,7 @@ import {
 import type { Job } from '@/lib/types';
 import { format } from 'date-fns';
 import { Skeleton } from '@/components/ui/skeleton';
+import AppSidebar from '@/components/layout/sidebar';
 
 const statusColors: { [key: string]: string } = {
   Open: 'bg-green-100 text-green-800 border-green-200 dark:bg-green-900/30 dark:text-green-300 dark:border-green-700/50',
@@ -132,7 +133,8 @@ export default function JobsPage() {
 
   return (
     <>
-      <div className="flex flex-col h-full">
+      <AppSidebar />
+      <div className="flex flex-col">
         <AppHeader title="Quản lý việc làm" />
         <main className="flex-1 p-4 md:p-6">
           <div className="flex items-center mb-6">
@@ -144,7 +146,7 @@ export default function JobsPage() {
                 </Button>
             </div>
           </div>
-          <div className="border rounded-lg">
+          <div className="border rounded-lg overflow-hidden">
             <Table>
               <TableHeader>
                 <TableRow>
