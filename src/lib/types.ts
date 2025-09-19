@@ -21,6 +21,7 @@ export type Candidate = {
   stage: CandidateStage;
   appliedDate: string;
   jobId: string;
+  jobTitle?: string;
 };
 
 export type CandidateStage = 'Applied' | 'Screening' | 'Interview 1' | 'Interview 2' | 'Offer' | 'Onboarding';

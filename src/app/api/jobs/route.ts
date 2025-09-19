@@ -78,6 +78,7 @@ export async function POST(request: NextRequest) {
         id: uuidv4(),
         postedDate: new Date().toISOString(),
         ...parseResult.data,
+        numberOfApplicants: 0,
     };
 
     jobs.unshift(newJob); // Add to the beginning of the array
