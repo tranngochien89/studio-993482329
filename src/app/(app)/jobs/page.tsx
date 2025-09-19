@@ -11,7 +11,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { MoreHorizontal, PlusCircle, Trash2, Edit, Eye } from 'lucide-react';
 import {
   DropdownMenu,
