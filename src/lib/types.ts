@@ -3,10 +3,12 @@ export type Job = {
   title: string;
   description: string;
   skills: string[];
-  salary: string;
+  salary?: string;
   location: string;
   deadline: string;
   status: 'Open' | 'Extended' | 'Pending' | 'Closed';
+  postedDate: string;
+  numberOfApplicants?: number;
 };
 
 export type Candidate = {

@@ -43,12 +43,10 @@ export default function DashboardPage() {
             </SelectContent>
           </Select>
           <div className="ml-auto flex items-center gap-2">
-            <CreateJobDialog>
-              <Button>
+              <Button disabled>
                 <PlusCircle className="mr-2 h-4 w-4" />
                 Tạo vị trí mới
               </Button>
-            </CreateJobDialog>
           </div>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
