@@ -12,12 +12,15 @@ import {
 import { Button } from '@/components/ui/button';
 import { PlusCircle, Search } from 'lucide-react';
 import { CreateJobDialog } from '@/components/jobs/create-job-dialog';
+import AppSidebar from '@/components/layout/sidebar';
 
 export default function DashboardPage() {
   const jobs = JOBS;
 
   return (
-    <div className="flex flex-col h-full">
+    <>
+    <AppSidebar />
+    <div className="flex flex-col">
       <AppHeader title="Bảng điều khiển" />
       <main className="flex-1 p-4 md:p-6">
         <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
@@ -55,5 +58,6 @@ export default function DashboardPage() {
         </div>
       </main>
     </div>
+    </>
   );
 }

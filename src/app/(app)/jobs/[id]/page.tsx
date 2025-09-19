@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { AddCandidateDialog } from '@/components/candidates/add-candidate-dialog';
 import { Button } from '@/components/ui/button';
 import { UserPlus } from 'lucide-react';
+import AppSidebar from '@/components/layout/sidebar';
 
 export default function JobDetailPage({ params }: { params: { id: string } }) {
   const job = JOBS.find((j) => j.id === params.id);
@@ -16,6 +17,8 @@ export default function JobDetailPage({ params }: { params: { id: string } }) {
   const candidates = getCandidatesByJobId(job.id);
 
   return (
+    <>
+    <AppSidebar />
     <div className="flex flex-col h-full">
       <AppHeader title={job.title} />
       <div className="flex justify-end p-4 md:p-6 border-b">
@@ -30,5 +33,6 @@ export default function JobDetailPage({ params }: { params: { id: string } }) {
         <KanbanBoard initialCandidates={candidates} job={job} />
       </main>
     </div>
+    </>
   );
 }
