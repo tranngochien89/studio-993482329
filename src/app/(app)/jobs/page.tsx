@@ -132,9 +132,9 @@ export default function JobsPage() {
   }
 
   return (
-    <>
+    <div className="w-full">
       <AppSidebar />
-      <div className="flex flex-col">
+      <div className="flex flex-col w-full">
         <AppHeader title="Quản lý việc làm" />
         <main className="flex-1 p-4 md:p-6">
           <div className="flex items-center mb-6">
@@ -243,6 +243,6 @@ export default function JobsPage() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-    </>
+    </div>
   );
 }
